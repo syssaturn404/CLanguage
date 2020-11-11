@@ -1,0 +1,56 @@
+Fungsi Header 
+
+Fungsi File Header antara lain sebagai berikut :
+- Untuk management memori
+- Untuk memanggil routines ROM BIOs
+- Untuk fungsi matematika kompleks
+- Untuk memanggil console DOS Input Output
+- Untuk routing basic di C++
+- Untuk beberapa fungsi rutin (Seperti konversi)
+- Untuk Menguakkan manipulator
+- Untuk operasi string dan karakter
+
+header file <stdio.h> 
+Merupakan singkatan dari standar input output header yang digunakan sebagai standar input output operasi yang digunakan oleh bahasa C, akan tetapi bisa juga digunakan dalam bahasa C++. Fungsi-fungsi yang ada didalam stdio.h antara lain sebagai berikut :
+printf() : merupakan fungsi keluaran yang digunakan untuk menampilkan informasi/pesan kelayar secara terformat (menentukan tipe data yang akan dikeluarkan).
+puts() : merupakan fungsi keluaran yang digunakan untuk menampilkan informasi/pesan yang bertipe data string (tanpa harus melakukan penentuan tipe data terlebih dahulu).
+putchar() : merupakan fungsi keluaran yang digunakan untuk menampilkan informasi/pesan yang bertipe data char(tanpa harus melakukan penentuan tipe data terlebih dahulu).
+scanf() : merupakan fungsi masukan yang digunakan untuk menginputkan data numerik, karakter, dan string secara terformat (menentukan tipe data yang akan dimasukan).
+gets() : merupakan fungsi masukan yang khusus untuk menerima masukan tipe data string (tanpa harus melakukan penentuan tipe data terlebih dahulu).
+
+
+header file <iostream.h> 
+Merupakan singkatan dari input outout stream header yang digunakan sebagai standar input output operasi yang digunakan oleh bahasa C++. Fungsi-fungsi yang ada didalam iostream.h antara lain sebagai berikut :
+cout : merupakan fungsi keluaran pada C++ yang menampilkan data dengan tipe data apapun kelayar.
+cin : merupakan fungsi masukan pada C++  yang bisa memasukan data berupa numerik dan karakter.
+endl : merupakan suatu fungsi yang manipulator yang digunakan untuk melakukan perintah Newline atau pindah baris
+
+
+header file <conio.h>  
+Merupakan File Header yang berfungsi untuk menampilkan hasil antarmuka kepada pengguna. Fungsi -fungsi yang ada didalam conio.h antara lain sebagai berikut :
+getch() : merupakan singkatan dari get character and echo yang digunakan untuk menahan (pause) output suatu program dan akan kembali mengeksekusi setelah kita melakukan inputan baik itu tombol enter atau tombol lainnya dan inputan tersebut tidak ditampilkan dalam window.
+getche() : secara fungsi sama dengan getch() akan tetapi ketika melakukan inputan, inputan tersebut tampil dalam window.
+clrscr() : merupakan singkatan dari clear screen yang digunakan untuk membersihkan layar windows .
+
+header file <math.h>   
+Merupakan file header yang berfungsi untuk operasi matematika.Fungsi-fungsi yang ada di math.h antara lain sebagai berikut :
+sqrt() : fungsi ini digunakan untuk menghitung akar dari suatu bilangan. Bentuk umum penulisannya  adalah sqrt(bilangan); 
+pow() : fungsi ini digunakan untuk menghitung hasil dari perpangkatan suatu bilangan  Bentuk umum penulisannya adalah pow(bilangan,pangkat); 
+sin(), cos(), tan() : fungsi ini digunakan untuk menghitung nilai sinus, cosinus, dan tangen dari sudut yang dimasukan. Bentuk umum penulisannya adalah sin(bilangan); 
+
+header file <stdlib.h>  
+Merupakan file header yang berfungsi untuk operasi pembanding dan operasi konversi. Fungsi-fungsi yang ada di stdlib.h antara lain sebagai berikut :
+max() : fungsi ini digunakan untuk menentukan nilai maximum dari 2 bilangan yang diinputkan. Bentuk penulisannya adalah max(bilangan1,bilangan2); .
+min() : fungsi ini digunakan untuk menentukan nilai minimum dari 2 bilangan yang diinputkan. Bentuk penulisannya adalah min(bilangan1,bilangan2); .
+atof() : fungsi ini digunakan untuk mengkonversi nilai string menjadi bilangan bertipe double. Bentuk umum penulisannya adalah atof(char nama_variabel); .
+atoi() : fungi ini digunakan untuk mengkonversi nilai string menjadi bilangan bertipe integer. Bentuk umum penulisannya adalah atoi(char nama_variabel); 
+
+header <string.h> : Merupakan file header yang berfungsi untuk melakukan manipulasi string. Fungsi-fungsi yang ada di string.h antara lain sebagai berikut :
+strcpy() : fungsi ini digunakan untuk menyalin suatu string ke variabel tujuan. Bentuk umum penulisannya adalah strcpy(variabeltujuan, string); .
+strlen() : fungsi ini digunakan untuk menghitung jumlah karakter yang ada dalam suatu string. Bentuk umum penulisannya adalah strlen(string); .
+strcmp() : fungsi ini digunakan untuk membandingkan 2 buah string. Bentuk umum penulisannya adalah  strcmp(string1,string2); .
+strrev() : fungsi ini digunakan untuk membalikan urutan suatu string. Bentuk umum penulisannya adalah strrev (string); .
+strlwr() : fungsi ini digunakan untuk mengubah semua huruf menjadi huruf kecil. Bentuk umum penulisannya adalah strlwr(sterng); .
+strupr() : fungsi ini digunakan untuk mengubah semua huruf menjadi huruf kapital. Bentuk umum penulisannya adalah strupr(string); .
+strcat() : fungsi ini digunakan untuk menggabungkan 2 buah string, untuk menggunakan fungsi ini juga harus menambahkan file header ctype.h. Bentuk umum penulisannya adalah strcat(variabeltujuan, string); 
+
