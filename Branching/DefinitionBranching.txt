@@ -1,0 +1,312 @@
+### Blok Percabangan 
+
+Apa itu Blok Percabangan ? Blok Percabangan cuma sebuah istilah yang artinya 
+menggambarkan alur program yang bercabang 
+Pada Flow Chart, logika "jika...maka" digambarkan dalam bentuk cabang 
+jika-->maka 
+  |     |
+Maka dari itu namanya percabangan 
+Selain percabangan,struktur ini juga disebut: control flow, decision, struktur kondisi, Struktur if, dsb
+
+### Percabangan if
+Percabangan if merupakan percabangan yang hanya memiliki satu blok pilihan saat kondisi bernilai benar.
+Flow Chart juga bisa diartikan gini :
+
+“Jika total belanja lebih besar dari Rp 100.000, Maka tampilkan pesan Selamat, Anda dapat hadiah”
+Kalau dibawah Rp 100.000 bagaimana?
+Ya pesannya tidak akan ditampilkan.
+
+# Contoh Program :
+#include <stdio.h>
+
+void main(){
+    printf("== Program Pembayaran ==\n");
+    int total_belanja = 0;
+
+    printf("Inputkan total belanja: ");
+    scanf("%i", &total_belanja);
+
+    // menggunakan blok percabangan if
+    if( total_belanja > 100000 ){
+        printf("Selamat, Anda mendapatkan hadiah!\n");
+    }
+
+    printf("Terimakasih sudah berbelanja di toko kami\n\n");
+}
+
+# Perhatikan Contoh :
+//menggunakan percabangan if 
+if( total_belanja > 100000 ) {
+     printf("Selamat, Anda mendapatkan hadiah!\n");
+}
+
+itu yang disebut blok program
+blok program berisi sekumpulan ekpresi dan statement untuk di exe oleh komputer 
+
+Blok Program bahasa C selalu diawali tanda buka kurung kurawal { dan diakhiri 
+dengan tutup kurung kurawal }
+kalo di dalam blok cuma satu baris tidak boleh di tanda kurung kurawal 
+Contoh : 
+if (total_belanja > 1000000)
+    printf("Selamat, Anda mendapatkan hadiah!\n)
+
+### Percabangan if/else
+
+Percabangan if/else merupakan percabangan yang memiliki dua blok pilihan.
+Blok pilihan pertama untuk kondisi benar, dan pilihan kedua untuk kondisi salah (false).
+
+Contoh : 
+Mulai 
+  |                     benar
+Apakah benar password ? ----> Selamat Datang Boss
+  |tidak
+Password salah, Coba lagi 
+  |
+Terimakasih sudah menggunakan 
+aplikasi kami
+  |
+Selesai 
+
+itu contoh flowchart untuk cek password kalo password benar blok hijau akan 
+menampilkan pesan Selamat Datang Bos (true) 
+Tapi kalo salah sebaliknya blok yang berwarna merah akan menampilkan pesan 
+Password salah, coba lagi(false)
+kemudian pesan yang berwarna abu2 akan tetap ditampilkan (Terimakasih sudah menggunakan 
+aplikasi kami) karna itu bukan bagian dari blok percabangan 
+
+# Contoh Program : 
+#include <stdio.h>
+
+void main(){
+    // membuat array karakter untuk menyimpan password
+    char password[30];
+
+    printf("==== Program Login ====\n");
+    printf("Masukan password: ");
+    scanf("%s", &password);
+
+    // percabangan if/esle
+    if( strcmp(password, "NgetehAsu") == 0 ){
+        printf("Selamat datang bos!\n");
+    } else {
+        printf("Password salah, coba lagi!\n");
+    }
+
+    printf("Terimakasih sudah menggunakan aplikasi ini!\n");
+}
+
+# Pengertian Program Diatas :
+
+Pertama kita membuat sebuah array dari karakter dengan panjang 30 karakter untuk menyimpan password.
+
+// membuat array karakter untuk menyimpan password
+char password[30];
+
+Setelah itu kita mengisi nilai password dengan mengambil input dari scanf().
+scanf("%s", &password);
+
+Berikutnya pada percabangan if/else, kita menggunakan fungsi strcmp() untuk membandingkan dua teks (string).
+
+if( strcmp(password, "NgetehAsu") == 0 ){
+    printf("Selamat datang bos!\n");
+} else {
+    printf("Password salah, coba lagi!\n");
+}
+Fungsi strcmp() akan menghasilkan nilai false atau nol (0) jika kedua teks yang dibandingkan sama.
+Maka dari itu kita menginputkan :
+
+strcmp(password, "NgetehAsu") == 0
+
+### Percabangan if/else/if
+Percabangan if/else/if merupakan percabangan yang memiliki lebih dari dua blok pilihan.
+Contoh :
+  Mulai
+    |       Ya 
+ Nilai > 90 -->Grade A ----->|
+    |Tidak                   | 
+ Nilai > 80 -->Grade = B+ -->|
+    |Ya                      |
+ Nilai > 70 -->Grade = B --->|
+    |Tidak                   |
+ Grade = F                   |
+    |                        |
+ Tampilkan <-----------------|
+  Grade                       
+    |                          	
+  Mulai
+
+Nilai > 90 = biru
+Nilai > 80 = biru 
+Nilai > 70 = biru 
+Grade A, B+, B = hijau 
+Grade F = merah
+
+Perhatikan blok yang di beri warna…
+Ini adalah blok untuk percabangan if/else/if.
+Kita bisa menambahkan berapapun blok yang kita inginkan.
+
+Contoh Program :
+#include <stdio.h>
+
+void main(){
+    int nilai;
+    char grade;
+
+    printf("=== Program Grade Nilai ===\n");
+    printf("Inputkan nilai: ");
+    scanf("%i", &nilai);
+
+    // menggunakan percabangan if/esle/if
+    if (nilai >= 90) {
+        grade = 'A';
+    } else if (nilai >= 80) {
+        grade = 'B'; // seharusnya B+
+    } else if (nilai >= 70) {
+        grade = 'B';
+    } else if (nilai >= 60) {
+        grade = 'C'; // seharusnya C+
+    } else if (nilai >= 50) {
+        grade = 'C';
+    } else if (nilai >= 40) {
+        grade = 'D';
+    } else if (nilai >= 30) {
+        grade = 'E';
+    } else {
+        grade = 'F';
+    }
+
+    printf("Nilai: %i\n", nilai);
+    printf("Grade anda: %c\n", grade);
+}
+
+Perhatikan di bagian else if untuk >= 80 dan >= 60, seharusnya di sana kita mengisi variabel grade dengan B+ dan C+.
+Tapi kita mengisinya dengan B dan C saja.
+Ini karena variabel tersebut bertipe char dan tipe data ini hanya mampu menyimpan satu karakter saja.
+Jika ingin menggunakan B+ dan C+, kita bisa pakai tipe data string.
+
+### Percabangan Switch/Case
+Percabangan switch/case adalah bentuk lain dari percabangan if/else/if
+
+Struktur code :
+switch(variabel){
+    case <value>:
+        // blok kode
+        break;
+    case <value>:
+        // blok kode
+        break;
+    default:
+        // blok kode
+}
+
+Kita dapat mermbuat blok kode (case) sebanyak yang diinginkan di dalam blok switch.
+Pada <value>, kita bisa isi dengan nilai yang nanti akan dibandingkan dengan varabel.
+Setiap case harus diakhiri dengan break. Khusus untuk default, tidak perlu diakhiri dengan break karena dia terletak di bagian akhir.
+Pemberian break bertujuan agar program berhenti mengecek case berikutnya saat sebuah case terpenuhi.
+
+# Contoh Program :
+#include <stdio.h>
+
+void main(){
+
+    char grade;
+
+    printf("Inputkan grade: ");
+    scanf("%c", &grade);
+
+    switch (toupper(grade)){
+        case 'A':
+            printf("Luar biasa!\n");
+            break;
+        case 'B':
+        case 'C':
+            printf("Bagus!\n");
+            break;
+        case 'D':
+            printf("Anda lulus\n");
+            break;
+        case 'E':
+        case 'F':
+            printf("Anda remidi\n");
+            break;
+        default:
+            printf("Grade Salah!\n");
+    }
+}
+
+# Perhatikan Code Diatas 
+Saya menggunakan toupper untuk mengubah huruf kecil menjadi huruf besar
+Mengapa menggunakan toupper()?
+Ini karena agar kita dapat menginputkan huruf kecil dan huruf besar untuk mengecek grade.
+Berikutnya coba perhatikan Case A dan Case B artinya ketika kita menginputkan 
+Case B maka Case C yang akan muncul begitu juga ketika kita menginputkan Case E maka 
+Case F yang muncul, Dan Default Muncul ketika input yang dimasukan salah 
+
+### Percabangan dengan Opertor Ternary
+Percabangan menggunakan opreator ternary merupakan bentuk lain dari percabangan if/else.
+Bisa dibilang:
+Bentuk singkatnya dari if/else.
+Operator ternary juga dikenal dengan sebutan operator kondisi (conditional operator).
+Bentuk Strukturnya gini :
+(kondisi) ? true : false
+
+# Bagian kondisi dapat kita isi dengan ekspresi yang menghasilkan nilai true dan false.
+Lalu setelah tanda tanya ? adalah bagian pilihan.
+Jika kondisi bernilai benar, maka true yang akan dipilih. Tapi kalau salah, maka false yang akan dipilih.
+ 
+# Contoh Program Blok Percabangan Dengan Operator Ternary :
+#include <stdio.h>
+
+void main(){
+
+    int jawaban;
+    //Mengambil input menggunakan scanf
+    printf("Berapakah hasil 3+4?\n");
+    printf("jawab> ");
+    scanf("%d", &jawaban);
+    //true false ? adalah bagian pilihan
+    printf("Jawaban anda: %s\n", (jawaban == 7) ? "Benar" : "Salah");
+
+}
+# Perhatikan Code ini :
+printf("Jawaban anda: %s\n", (jawaban == 7) ? "Benar" : "Salah");
+Disini kita membuat operator ternary untuk membuat kondisi if/else
+Klo gak menggunakan Operator bakal gini Struktur Codenya :
+if( Jawaban == 7){
+     printf("Jawaban Anda : Benar\n");
+} else {
+     printf("Jawaban Anda : Salah\n");
+}
+Sama seperti Percabangan if else
+
+### Percabangan Bersarang (Nested)
+Semua bentuk blok percabangan di atas dapat kita buat di dalam percabangan yang lainnya.
+Ini disebut juga dengan percabangan bersarang atau nested if 
+
+# Contoh Program Percabangan Bersarang (Nested if)
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    
+    string username, password;
+
+    cout << "=== Welcome To My Program ===" << endl;
+    cout << "Username: ";
+    cin >> username;
+    cout << "Password: ";
+    cin >> password;
+
+    if (username == "rajingoding"){
+        if (password == "kopi"){
+            cout << "Selamat datang bos!" << endl;
+        } else {
+            cout << "Password salah, coba lagi!" << endl;
+        }
+    } else {
+        cout << "Anda tidak terdaftar" << endl;
+    }
+
+    return 0;
+}
