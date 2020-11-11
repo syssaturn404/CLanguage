@@ -1,0 +1,25 @@
+### Dalam pemrograman C kita perlu banyak format specifier untuk berbagai jenis data. 
+# Format specifier mendefinisikan jenis data yang akan dicetak pada output. 
+Apakah akan mencetak output yang diformat atau mengambil input yang diformat kita perlu Format specifier. 
+Format specifier juga disebut sebagai format string.
+
+## Format Specifier 	Deskripsi 	  Tipe Data yang didukung
+%c                  	Character         char unsigned char
+%d or %i            	Character 	      short
+%e or %E or %g or %G 	Scientific        Notation untuk float 	float double
+%f                   	Floating point   	float
+%hi 	                Signed Integer    (Short) 	short
+%hu 	                Unsigned Integer  (Short) 	unsigned short
+%l or %ld or %li 	    Signed Integer  	long
+%lf             	    Floating point 	  double
+%Lf 	                Floating point 	  long double
+%lu                  	Unsigned integer 	unsigned int unsigned long
+%lli or %lld 	        Signed integer 	  long long
+%llu 	                Unsigned integer 	unsigned long long
+%o                  	Integer           dalam bentuk octal 	
+%p 	                  Alamat pointer ke void 	void *
+%s                  	String 	          char *
+%u 	                  Unsigned Integer 	unsigned int unsigned long
+%x or %X            	Integer dalam bentuk hexadecimal 	short unsigned short
+%n 	                  Prints nothing 	
+%% 	                  Print karakter %
