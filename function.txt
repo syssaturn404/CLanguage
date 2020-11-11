@@ -1,0 +1,62 @@
+### Fungsi2 pada bahasa pemrograman C ###
+
+Fungsi printf()
+Fungsi printf() merupakan fungsi untuk menampilkan output ke layar komputer. Fungsi ini terdapat pada library stdio.h.
+Oleh sebab itu, ketika kita diharuskan untuk menuliskan #include <stdio.h> di bagian atas program agar bisa menggunakan fungsi ini.
+Fungsi puts() adalah fungsi untuk menampilkan output. Fungsi ini juga terdapat pada library stdio.h.
+Perbedaanya dengan printf(), fungsi puts() tidak memerlukan format.
+Fungsi puts() akan selalu membuat baris baru. Jadi tidak perlu menggunakan simbol \n seperti pada printf().
+putchar() yang khusus untuk menampilkan satu karakter saja.
+Pada fungsi printf() kita menggunakan simbol %s, %d, dan \n untuk format teks. Simbol-simbol ini disebut format specifier.
+Fungsi scanf() adalah fungsi untuk mengambil input dari keyboard. Fungsi ini memiliki format seperti fungsi printf().
+♦ Fungsi pustaka scanf() digunakan untuk menginput data berupa data numerik, karakter
+dan string secara terformat.
+♦ Hal-hal yang perlu diperhatikan dalam pemakaian fungsi scanf() :
+ Fungsi scanf() memakai penentu format
+ Fungsi scanf() memberi pergantian baris secara otomatis
+ Fungsi scanf() tidak memerlukan penentu lebar field
+ Variabelnya harus menggunakan operator alamat & 
+Fungsi gets() adalah fungsi untuk mengambil input dalam satu baris. Fungsi gets() tidak memerlukan format seperti scanf().
+♦ Fungsi gets() digunakan untuk memasukkan data bertipe karakter dan tidak dapat
+digunakan untuk memasukkan data numerik.
+♦ Harus diakhiri dengan penekanan tombol enter
+♦ Cursor secara otomatis akan pindah baris
+♦ Tidak memerlukan penentu format 
+Fungsi fgets() lebih aman dibandingkan gets(), karena kita bisa menentukan ukuran buffer dan sumber inputan.
+Fungsi strcmp() untuk membandingkan dua teks (string)
+Fungsi strcmp() akan menghasilkan nilai false atau nol (0) jika kedua teks yang dibandingkan sama.
+Fungsi fgets di bahasa c
+Counter Fungsi ini ada di Blok Percabangan Atau di Blok Perulangan ini adalah pencacah 
+atau yang selalu menambahkan 1 nilai
+♦ Fungsi getchar() digunakan untuk membaca data yang bertipe karakter
+♦ Harus diakhiri dengan penekanan tombol enter
+♦ Karakter yang dimasukkan terlihat pada layar
+♦ Pergantian baris secara otomatis 
+♦ Fungsi getch() dan getche() digunakan untuk membaca data karakter.
+♦ Karakter yang dimasukkan tidak perlu diakhiri dengan penekanan tombol enter.
+♦ Tidak memberikan efek pergantian baris secara otomatis
+♦ Jika menggunakan fungsi getch() karakter yang dimasukkan tidak akan ditampilkan
+pada layar sehingga sering digunakan untuk meminta inputan berupa password.
+♦ Sedangkan pada getche() karakter yang dimasukkan akan ditampilkan pada layaratis 
+Ukuran buffer adalah batas ukuran panjang string yang diinputkan. Lalu stdin adalah sumber inputan dari keyboard.
+Kita juga bisa mengambil input dari file dengan fgets() dengan memasukan pointer FILE pada stdin.
+typedef adalah kata kunci untuk mendefinisikan tipe data baru.
+Fflush(stdin) berfungsi untuk menghapus (flush) isi dari input buffer
+fflush(stdin) adalah undefined behavior dan akan selalu bermasalah dalam ANSI C (karena tidak sesuai dengan standar C) 
+oleh karena itu gunakan fungsi alternative lain agar tidak terjadi penuhnya input buffer. 
+switch adalah adalah pernyataan penyeleksian untuk memanipulasi jalanya aliran program berdasarkan conditional expression 
+Mengendalikan aliran program agar dapat berjalan secara fleksibel atas keadaan program dan keinginan pengguna
+Fungsi toupper() adalah untuk memperoleh huruf kapital dari suatu huruf kecil.
+Fungsi tolower() adalah untuk memperoleh huruf kecil dari suatu huruf kapital.
+Fungsi gets di bahasa c
+Simbol	Arti atau Fungsi
+%c	untuk menampilkan karakter
+%s	untuk menampilkan teks (string)
+%d, %i	untuk menampilkan bilangan desimal
+%f	untuk menampilkan bilangan pecahan
+%o	untuk menampilkan bilangan oktal
+%x	untuk menampilkan bilangan heksadesimal
+\t	untuk membuat tabs
+%s  adalah simbol untuk menampilkan nilai string;
+%d  adalah simbol untuk menampilkan nilai angka atau bilangan desimal;
+\n  adalah simbol untuk membuat baris baru.
