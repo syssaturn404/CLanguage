@@ -1,0 +1,291 @@
+### Operator
+
+# Jenis Operator dalam C:
+
+    Operator Aritmatika;
+    Operator Penugasan;
+    Operator Pembanding;
+    Operator Logika;
+    Operator Bitwise;
+    dan Operator Dll.
+
+# Pengertian Perbedaan dari Operator diatas :
+Operator aritmatika merupakan operator yang digunakan untuk melakukan operasi aritmatika
+
+## Operator Aritmatika terdiri dari : 
+Nama Operator	Simbol
+Penjumlahan	+
+Pengurangan	-
+Perkalian	*
+Pembagian	/
+Sisa Bagi	%
+
+### Operator penugasan (Assignment Operator) merupakan operator untuk meberikan tugas pada variabel.
+Biasanya untuk mengisi nilai.
+
+## Operator Penugasan terdiri dari :
+Nama Operator	               Simbol
+Pengisian Nilai	                =
+Pengisian dan Penambahan	+=
+Pengisian dan Pengurangan	-=
+Pengisian dan Perkalian   	*=
+Pengisian dan Pembagian  	/=
+Pengisian dan Sisa bagi 	%=
+Pengisian dan shift left	<<=
+Pengisian dan shift right	>>=
+Pengisian dan bitwise AND	&=
+Pengisian dan bitwise OR	|=
+Pengisian dan bitwise XOR	^=
+
+# contoh coding operator penugasan :
+#include <stdio.h>
+
+void main(){
+    int a, b;
+
+    // pengisian nilai dengan operator =
+    a = 5;
+    b = 10;
+
+    // pengisian sekaligus penambahan
+    b += a; // ini sama seperti b = b + a
+    printf("Hasil b += a adalah %d\n", b);
+
+    // pengisian sekaligus pengurangan
+    b -= a; // ini sama seperti b = b - a
+    printf("Hasil b -= a adalah %d\n", b);
+
+    // pengisian sekaligus perkalian
+    b *= a; // ini sama seperti b = b * a
+    printf("Hasil b *= a adalah %d\n", b);
+
+    // pengisian sekaligus pembagian
+    b /= a; // ini sama seperti b = b / a
+    printf("Hasil b /= a adalah %d\n", b);
+
+    // pengisian sekaligus sisa bagi
+    b %= a; // ini sama seperti b = b % a
+    printf("Hasil b %= a adalah %d\n", b);
+}
+
+### Operator pembanding adalah operator untuk memabndingkan dua buah nilai. 
+Operator ini juga dikenal dengan operator relasi.
+
+## Operator pembanding terdiri dari:
+Nama Operator	Simbol
+Lebih Besar	>
+Lebih Kecil	<
+Sama Dengan	==
+Tidak Sama dengan	!=
+Lebih Besar Sama dengan	>=
+Lebih Kecil Sama dengan	<=
+
+Nilai yang dihasilkan dari operasi pembanding akan berupa true dan false.
+Pada bahasa C, nilai true akan samadengan 1 dan false akan sama dengan 0.
+
+### Operator logika 
+
+## Operator Logika terdiri dari :
+Nama Operator	Simbol di Java
+Logika AND	   &&
+Logika OR	   ||
+Negasi/kebalikan   !
+
+Operator logika digunakan untuk membuat 
+operasi logika 
+
+    Pernyataan 1: Si B seorang programmer = true.
+    Pernyattan 2: dan Si B menggunakan Linux = true.
+
+Apa si B seorang Programer dan menggunakan Linux?
+
+Pertanyaan 1 && dan Pernyataan 2 = true
+
+Bingung?
+
+Coba cek lagi tabel kebenaran untuk logika AND.
+Pernyatan 1	Pernytaan 2	Logika AND
+true	        true          true
+true	        false	        false
+false	        true	        false
+false	        false	        false
+
+## Contoh program operator logika :
+
+#include <stdio.h>
+
+void main(){
+    /**ini operator logika
+    nilai 1 pada variable a dan type data int (true)
+    nilai 0 pada variable b dan type data int (false)
+    dalam pemrograman c true =1 dan false =0**/
+    int a = 1; // true
+    int b = 0; // false
+
+    printf("a = %d\n", a);
+    printf("b = %d\n", b);
+
+    // logika AND
+    printf("a && b = %d\n", a && b);
+
+    // logika OR
+    printf("a || b = %d\n", a || b);
+    // logika NOT
+    printf("!a = %d\n", !a);
+}
+
+### Operator Bitwise
+
+# Operator bitwise merupkan operator yang digunakan untuk operasi berdasarkan bit (biner) dari sebuah nilai.
+
+## Operator Bitwise terdiri dari : 
+Nama Operator	Simbol di Java
+AND	&
+OR	|
+XOR	^
+NOT/komplemen	~
+Left Shift	<<
+Right Shift	>>
+
+# Contoh bilangan bitwise :
+Misal kita punya nilai 6 dan 3 nah kita ubah ke dalam angka binner
+jadinya :
+6 = 0110
+3 = 0011
+Operator bitwise akan melakukan operasi berdasarkan binner binner itu 
+
+## Bitwise AND (&)
+Bitwise AND merupakan operasi bit berdasarkan logika AND
+misal 
+6 = 0110
+3 = 0011
+0110
+0011
+------&
+0020 = 2
+Perhatikan bilangan binner untuk nilai 6 dan 3
+apabila kita melakukan operasi AND, maka akan menghasilkan bilangan binner baru 
+Kemudian binner yang dihasilkan itu diubah ke dalam bilangan desimal l
+maka terjadilah 2 
+
+# Contoh program :
+#include <stdio.h>
+       void main(){
+       //Ini operator bitwise AND
+       int a = 6;
+       int b = 3;
+       printf("a & b = %d\n", a & b);
+   }
+
+## Operator bitwise OR juga sama seperti bitwise AND.
+Operator bitwise OR akan menghasilkan nilai false atau 0 saat keduanya false.
+
+# Contoh gambaran bitwise OR
+6 | 3
+0110
+0011
+-----|
+0111 = 7
+
+# Contoh Program operator Bitwise OR
+#include <stdio.h>
+  void main(){
+   int a = 6;
+   int b = 3;
+   //output 
+   printf("a | b = %d\n", a | b);
+}
+
+### Bitwise XOR (^)
+# Operator XOR (Exclusive OR) akan menghasilkan nilai 1 saat kedua nilai tidak sama.
+
+# Contoh Gambaran Bitwise XOR
+6 ^ 3 
+0110
+0011
+----^
+0101 = 5
+
+# Contoh Program Bitwise XOR^
+#include <stdio.h>
+
+void main(){
+    int a = 6;
+    int b = 3;
+
+    printf("a & b = %d\n", a ^ b);
+}
+
+### Bitwise NOT (~)
+# Bitwise NOT dikenal juga dengan komplemen.
+Operator ini akan menghasilkan nilai biner yang terbalik dari biner aslinya.
+
+# Bitwise NOT ~ 
+6 --> 0110
+3 --> 0011 = -7 
+Komplemen Dua :
+1000 = -8 
+1001 = -7 
+1010 = -6
+1100 = -4
+1101 = -3
+1110 = -2
+1111 = -1
+0000 = 0
+0001 = 1 
+0010 = 2
+0011 = 3 
+0100 = 4
+0100 = 5
+0110 = 6
+0111 = 7
+
+# Contoh Program Bitwise NOT~
+#include <stdio.h>
+
+void main(){
+    //ini operator BitwiseNOT
+    int a = 6;
+
+    printf("~a = %d\n", ~a);
+}
+
+### Bitwise Left Shift (<<)
+# Operator bitwise left shift akan menghasilkan nilai biner yang digeser ke kiri.
+
+# Contoh:
+
+6 << 1
+
+# Contoh Program :
+#include <stdio.h>
+   void main(){
+   //ini operator bitwise Left Shift 
+   int a = 6;
+
+  printf("a << 1 = %d\n", a << 1);
+}
+
+### Bitwise Right Shift 
+# Operator bitwise Right Shift sama seperti diatas cuman bedanya dia digeser ke arah kanan.
+
+Contoh 6 >> 1 = 3
+
+Contoh Program :
+#include <stdio.h>
+  void main(){
+  //ini operator bitwise Right Shift  
+  int a = 6;
+ 
+  printf("a >> 1 = %d\n", a >> 1);
+} 
+
+### Operator Lain-lain(Misc Operator)
+
+# Selain dari operator yang kita bahas di atas, terdapat beberapa operator lain yang harus diketahui:
+Nama Operator	         Simbol	Keterangan
+Alamat memori	         & untuk mengambil alamat memori
+Pointer	               * untuk membuat pointer
+Ternary	?              : untuk membuat kondisi
+Increment	             ++ untuk menambah 1
+Decrement	             -- untuk mengurangi 1
