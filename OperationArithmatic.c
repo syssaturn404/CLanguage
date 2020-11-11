@@ -28,4 +28,8 @@ void main(){
     // result a % b 
     result = a % b;
     printf("Result a % b : %i\n", result);
+    
+    // result a - b
+    result = a - b;
+    printf("Result a - b : %i\n", result);
 }
