@@ -1,0 +1,261 @@
+#### Mengenal Fungsi Dan Cara Membuat Fungsi ####
+
+# Apa itu Fungsi?
+
+# Fungsi adalah sub-program yang bisa digunakan kembali baik di dalam program itu sendiri, maupun di program yang lain.
+Contoh fungsi yang sering kita buat adalah fungsi main().
+Fungsi ini memang wajib ada di setiap program C karena akan dieksekusi pertama kali.
+Kita juga sebenarnya bisa membuat fungsi yang lain…
+
+## Cara Membuat Fungsi Pada Bahasa C
+
+# Fungsi Pada Bahasa C Dapat Kita Buat seperti ini :
+
+int nama_fungsi (int parameter){
+	//ini berisi kode program dari fungsi
+}
+
+# Fungsi biasanya akan mengembalikan sebuah nilai dari hasil prosesnya. 
+Karena itu, kita harus menentukan tipe data untuk nilai yang akan dikembalikan.
+Gimana kalo kita gamau ngembaliin ? 
+Kita bisa pakai fungsi void yang artinya nol tidak mengembalikan 
+Contoh program menggunakan type data void :
+void nama_fungsi(){
+	printf("Fungsi ini tidak mengembalikan apa-apa")
+}
+Bedanya fungsi int dengan fungsi void apa ? Jika kita menggunakan fungsi int artiannya kita harus menentukan kembaliannya
+Lalu parameter bersifat opsional
+
+Mari kita buat program C dengan fungsi void buat program baru dengan nama contoh_fungsi.c 
+
+## Isikan Code ini :
+
+#include <stdio.h>
+
+// membuat fungsi say_hello()
+void say_hello(){
+    printf("Hello Selamat Datang!\n");
+}
+
+void main(){
+    // memanggil fungsi say_hello()
+    say_hello();
+}
+
+# Maka hasilnya :
+Hello Selamat Datang!
+
+Fungsi ini juga bisa kita panggil berkali2 contoh :
+
+#include <stdio.h>
+
+// membuat fungsi say_hello()
+void say_hello(){
+    printf("Hello Selamat Datang!\n");
+}
+
+void main(){
+    // memanggil fungsi say_hello()
+    say_hello();
+    say_hello();
+    say_hello();
+    say_hello();
+    say_hello();
+}
+
+# Maka hasilnya :
+Hello Selamat Datang!
+Hello Selamat Datang!
+Hello Selamat Datang!
+Hello Selamat Datang!
+Hello Selamat Datang!
+
+
+## Fungsi dengan Parameter
+
+#Parameter adalah variabel yang menyimpan nilai untuk diproses di dalam fungsi.
+Parameter akan menyimpan nilai yang akan diinputkan ke dalam fungsi.
+
+# Contoh:
+
+void say_hello(char name[]){
+    printf("Hello %s!\n", name);
+}
+
+Pada contoh di atas, name adalah sebuah parameter berupa array dengan tipe char.
+Parameter ini hanya akan dikenali di dalam fungsi.
+
+Trus caranya memanggil fungsi yang memiliki parameter gimana ? 
+
+# Gini caranya :
+say_hello("Rajingoding");
+
+Perhatikan! "Rajingoding" adalah nilai yang akan kita berikan ke parameter.
+Biar lebih paham… mari kita coba dalam program.
+
+# Silahkan buat program baru dengan nama_parameter.c, kemudian isi dengan kode berikut:
+
+#include <stdio.h>
+
+void say_hello(char name[]){
+    printf("Hello %s!\n", name);
+}
+
+void main(){
+    say_hello("Belajar ");
+    say_hello("Mengenal ");
+    say_hello("Fungsi");
+}
+
+# Hasilnya :
+Ayo Belajar !
+Ayo Giat !
+Ayo Semangat!
+
+Hasil outputnya akan menyesuaikan dengan nilai parameter yang kita berikan ke dalam fungsi.
+
+Lalu bagaimana kalau ada lebih dari satu parameter?
+Gampang… 
+
+Tinggal ditambahkan dan dipisah dengan tanda koma seperti ini:
+
+void add(int a, int b){
+    printf("%d + %d = %d\n", a, b, a+b);
+
+# Ayo kita coba, buatlah program bernama dua_param.c ketikan code dibawah :
+
+#include <stdio.h>
+
+void add(int a, int b){
+    printf("%d + %d = %d\n", a, b, a+b);
+}
+
+void main(){
+    add(1, 4);
+    add(8, 2);
+    add(3, 2);
+}
+
+# Hasilnya :
+
+1 + 4 = 5
+8 + 2 = 10
+3 + 2 = 5
+
+## Fungsi yang Mengembalikan Nilai
+
+Pada contoh di atas, kita memberikan nilai masukan ke dalam fungsi berupa integer…
+
+…lalu di dalamnya dilakukan operasi penjumlahan.
+
+void add(int a, int b){
+    printf("%d + %d = %d\n", a, b, a+b);
+}
+
+# Fungsi ini tidak akan mengembalikan apa-apa, karena tipe data yang diberikan pada nilai kembalian adalah void.
+Fungsi kadang harus mengembalikan sebuah nilai agar dapat diproses di tahap berikutnya.
+Kita bisa menggunakan kata kunci return untuk mengembalikan nilai dari fungsi.
+
+# Contoh:
+
+int add(int a, int b){
+    return a+b;
+}
+
+# Maka fungsi add() akan mengembalikan nilai berupa integer dari hasil penjumlahan nilai a dan b.
+Mari kita coba contoh yang lain…
+Silahkan buat program baru bernama fungsi_bagi.c, kemudian isi dengan kode berikut:
+
+#include <stdio.h>
+
+float bagi(int a, int b){
+    float hasil = (float)a / (float)b;
+    return hasil;
+}
+
+void main(){
+    printf("Hasil 100/2: %.2f\n", bagi(5, 2));
+}
+
+# Maka hasilnya :
+
+Hasil 100/2: 2.50
+
+### Variabel Lokal dan Variabel Global
+
+# Variabel lokal dan variabel global akan sering kita temukan dalam pembuatan fungsi.
+Variabel global adalah variabel yang bisa diakses dari semua fungsi. 
+Sedangkan variabel lokal adalah variabel yang hanya bisa diakses dari dalam fungsi itu sendiri.
+
+# Contoh :
+
+#include <stdio.h>
+
+// membuat variabel global
+int nilai = 9;
+
+void main(){
+    // membuat variabel lokal
+    int nilai = 7;
+
+    // mencetak variabel
+    printf("Nilai: %d\n", nilai);
+}
+
+# Pada contoh di atas, kita membuat variabel global bernama nilai.
+Lalu di dalam fungsi main(), kita membuat variabel lagi bernama nilai dengan nilai yang berbeda.
+Variabel yang ada di dalam fungsi main() adalah variabel lokal.
+Lalu, berapakah hasil outputnya?
+
+Jawabannya: 7
+
+Mengapa bisa 7?
+
+# Karena variabel nilai kita buat ulang di dalam fungsi main.
+Sekarang coba hapus variabel lokal yang ada di dalam main, sehingga akan menjadi seperti ini:
+
+#include <stdio.h>
+
+// membuat variabel global
+int nilai = 9;
+
+void main(){
+    // mencetak variabel
+    printf("Nilai: %d\n", nilai);
+}
+
+### Pass by Value dan Pass by Reference
+
+# Pass by value dan pass by reference adalah cara untuk memberikan nilai pada parameter.
+Biasanya kita langsung memberikan nilai kepada parameter dengan cara seperti ini:
+
+kali_dua(4);
+Ini disebut pass by value, karena di sana kita memberikan nilai 4.
+
+# Nah kalau seperti ini:
+
+kali_dua(&nama_variabel);
+Ini disebut pass by reference, karena kita memberikan alamat memori.
+
+# Contoh:
+
+#include <stdio.h>
+
+void kali_dua(int *num){
+    *num = *num * 2;
+}
+
+void main(){
+    int angka = 9;
+
+    // memanggil fungsi
+    kali_dua(&angka);
+
+    // mencetak isi variabel
+    // setelah fungsi dipanggil
+    printf("isi variabel angka = %d\n", angka);
+}
+
+# Fungsi kali_dua() memiliki parameter berupa pointer, artinya kita harus memberikan alamat memori untuk parameter ini.
+Pada saat pemanggilan, fungsi kali_dua() kita isi parameternya dengan alamat memori dari variabel angka.
+Maka hasilnya nilai variabel angka akan dikalikan dengan 2 berdasarkan rumus pada fungsi yang kita berikan.
