@@ -101,4 +101,4 @@
 ### CONTRIBUTOR
 
 >*If there is a syntax error in the program code or writing in the definition
-please contact me, humans are never free from errors
+please contact me, humans are never free from errors*
