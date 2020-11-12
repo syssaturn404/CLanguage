@@ -1,0 +1,207 @@
+### Struktur Data Array ### 
+
+Kalo kamu disuruh menyimpan banyak data di 1 program gimana ? 
+Misal Ngesave nama2 dalam satu kantor
+Contoh :
+
+char[30] namaKontak1: "Ayu";
+char[30] namaKontak2: "Malik";
+char[30] namaKontak3: "Ridwan";
+char[30] namaKontak4: "Mutia";
+char[30] namaKontak5: "Putri";
+char[30] namaKontak6: "Selvi";
+
+Ini sah2 aja tapi kalo lebih dari itu menyimpan datanya gimana ?
+pasti cabek buat var nya.. terus ?
+ya maka dari itu kita buat array
+
+## Apa itu Array ? 
+Array adalah struktur data yang menyimpan sekumpulan data dalam satu tempat
+Setiap data dalam Array memiliki indeks, sehingga kita akan mudah memprosesnya.
+Indeks array selalu dimulai dari angka nol (0).
+Ukuran array akan bergantung dari banyaknya data yang ditampung di dalamnya.
+
+Contoh Struktur Data Array:
+// membuat array kosong dengan tipe data integer dan panjang 10
+int nama_array[10];
+
+// membuat array dengan langsung diisi
+int nama_arr[3] = {0, 3, 2}
+Cara membaut array hampir sama seperti cara membuat variabel biasa.
+Bedanya… pada array kita harus menentukan panjangnya.
+
+Contohnya :
+//membuat array dengan type data integer
+//dengan panjang 20
+int nama_Array[20];
+//isi array 5
+int nama_Array[5] = {0 , 5 , 2};
+
+## Cara Mengambil Data dari Array 
+
+Seperti yang udah ditulis diatas...
+Array akan menyimpan sekumpulan data dan memberinya nomer indeks agar mudah diakses.
+Indeks array selalu dimulai dari nol 0.
+Misalkan kita punya array seperti ini 
+
+Contoh :
+char huruf[5] = {'a', 'b', 'c', 'd', 'e'};
+Pertanyaannya gimana cara ngambil huruf e ? 
+huruf[4]
+lah kok huru[4] bukan 5 ? kan Array memiliki indeks dari nol jadi kita hitung  0 dari a
+
+Contoh Program :
+#include <stdio.h>
+   
+   void main(){
+     //mengisi variable nama dengan char atau bernilai 1 
+   char abjad[5] = {'a' , 'b' , 'c' , 'd' , 'e'};
+   //kita panggil misal huruf e
+   //%c berguna untuk menampilkan karakter  
+     printf("Huruf : %c\n", huruf[4]);
+}
+Contohnya kurang lebih gitu
+Gimana kalo kita mau ganti huruf e jadi Z ? bisa ?
+tentu bisa, apa sih yang gabisa di dunia ini 
+
+gapercaya ? coba 
+Contoh Programnya :
+
+#include <stdio.h> 
+  
+   void main(){
+   // isi asli array 
+   char abjad[5] = {'a','b','c','d','e'};
+  // setelah dirubah   
+   huruf[4] = 'z';
+  // mencetak isi array 
+  printf("Huruf : %c\n", huruf[4]);
+}
+
+Maka hasil yang di cetak adalah z simple sekali
+
+Menggunakan Perulangan dan Array
+Pada contoh di atas, kita menggunakan perintah printf() secara berulang untuk mencetak semua isi array.
+printf("Nilai ke-1: %d\n", nilai[0]);
+printf("Nilai ke-2: %d\n", nilai[1]);
+printf("Nilai ke-3: %d\n", nilai[2]);
+printf("Nilai ke-4: %d\n", nilai[3]);
+printf("Nilai ke-5: %d\n", nilai[4]);
+
+Waduh kalo isi Array ada ribuan kata gimana ? Cape dong kita cetaknya 
+Tenang aja kita memanfaatkan perulangan Array untuk nyetaknya 
+
+Contoh Program Loop Array :
+
+#include <stdio.h>
+
+int main(){
+    // membuat array kosong
+    int nilai[10];
+
+    // mengisi array dengan variable nilai
+    /**ingat di dalam struktur data array selalu mempunyai
+    indeks nol**/
+    nilai[0] = 10;
+    nilai[1] = 20;
+    nilai[2] = 30;
+    nilai[3] = 40;
+    nilai[4] = 50;
+    nilai[5] = 60;
+    nilai[6] = 70;
+    nilai[7] = 80;
+    nilai[8] = 90;
+    nilai[9] = 100;
+    // mencetak isi array dengan perulangan 
+    for(int i; i < 9; i++){
+        printf("Nilai ke-1: %d\n", nilai[i]);
+    }
+    return 0;
+}
+
+Tapi ada yang masih kurang.
+Pada perulangan di atas kita memberikan batas maksimal secara manual, yaitu: i < 5.
+Nilai 5 seharusnya diganti dengan ukuran atau jumlah isi array.
+Sehingga akan menjadi seperti ini:
+int length = sizeof(nilai) / sizeof(*nilai);
+for (int i = 0; i < length; i++){
+    printf("Nilai ke-1: %d\n", nilai[i]);
+}
+
+## Mengambil Panjang Array
+Pada contoh di atas, kita menggunakan fungsi sizeof() untuk mengambil panajang atau ukuran array.
+Fungsi sizeof() sebenarnya akan mengambil ukuran memori dari array.
+
+# Misalkan saya punya array seperti ini:
+int nilai[2] = {1,2};
+Isi array-nya berupa integer, tipe data integer memiliki ukuran 4 byte dalam memori. Maka ukuran array tersebut adalah 8 byte.
+Lalu bagaimana cara mendapatkan banyaknya isi array?
+Bahasa pemrograman C belum memiliki fungsi khusus untuk mengambil banyaknya isi array.
+Tapi kita bisa mengambil panjang array dengan membagi besar array dan ukuran pointernya.
+
+Contoh:
+
+int array[] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+
+/* ukuran array dalam byte */
+int size = sizeof(array);
+
+/* banyaknya isi array `array` */
+int length = sizeof(array) / sizeof(*array); 
+
+### Program Hitung Rata2 
+Anggap saja kita diminta untuk membuat program untuk menghitung tinggi rata-rata dari sepuluh orang.
+Pertama kita pasti akan membutuhkan sebuah array dengan panjang 10 yang berisi kumpulan tinggi badan.
+int tinggi_badan[10] = {175, 165, 166, 157, 184, 156, 163, 176, 171, 169};
+Berikutnya kita harus menghitung nilai rata-rata dari sekumpulan nilai tersebut.
+
+Contoh Program :
+
+#include <stdio.h>
+
+void main(){
+    // membuat array dari tinggi badan
+    int tinggi_badan[10] = {175, 165, 166, 157, 184, 156, 163, 176, 171, 169};
+
+    //  length itu sama dengan n
+    int length = sizeof(tinggi_badan) / sizeof(*tinggi_badan);
+    int sum = 0;
+
+    for(int i = 0; i < length; i++){
+        sum += tinggi_badan[i];
+    }
+
+    // rata-rata tinggi badan
+    float rata_rata = (float)sum / (float)length;
+
+    printf("Rata-rata tinggi badan: %.2f\n", rata_rata);
+}
+
+### Array Multi Dimensi
+Array yang kita buat pada contoh-contoh program di atas adalah array satu dimensi.
+Array bisa dibuat dua dimensi bahkan lebih.
+Array multidimensi biasanya digunakan untuk membuat matriks.
+Contoh array dua dimensi :
+
+int matriks[3][3] = {
+    {1, 3, 5},
+    {5, 3, 1},
+    {6, 2, 3}
+};
+
+Gimana cara ngambil data array dua dimensi ? Caranya gini :
+
+matriks[1][2];
+
+Contoh Program :
+#include <stdio.h>
+
+void main(){
+    int matriks[3][3] = {
+        {1, 3, 5},
+        {5, 3, 1},
+        {6, 2, 3}
+    };
+
+    printf("Isi Data pada indeks ke-(1,0): %d\n", matriks[1][0]);
+}
