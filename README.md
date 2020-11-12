@@ -8,7 +8,9 @@
 <a href="https://github.com/syssaturn404"><img title="SYSSATURN404" src="https://img.shields.io/badge/Author-Syssaturn404-blue.svg?style=for-the-badge&logo=github"></a></p>
 <p align="center">
 <a href ="#"><img title="License" src ="https://img.shields.io/aur/license/c"></a>
-<a href="#"><img title="Followers" src="https://img.shields.io/github/followers/syssaturn404?label=Followers&style=flat"></a></center>
+<a href="#"><img title="Stars" src="https://img.shields.io/github/stars/syssaturn404/CLanguage?color=red"></a>
+<a href="#"><img title="Watchers" src="https://img.shields.io/github/watchers/syssaturn404/CLanguage"></a>
+<a href="#"><img title="Followers" src="https://img.shields.io/github/followers/syssaturn404?color=red&label=Followers"></a></center>
 </p>
 <p>This program is written in Dev C++ IDE for windows. This program is not very advanced because it is beginner friendly and has lots of bugs. Anyone new to the c language can put this example into practice.</p>
 <li>Only programs written in c language will be merged.</li>
