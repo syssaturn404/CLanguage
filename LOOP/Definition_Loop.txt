@@ -1,0 +1,205 @@
+
+### Blok Perulangan 
+
+Contoh Blok Perulangan dalam program, misalnya kita disuruh Tolong Outputkan Tulisan 
+Si B adalah programer sebanyak 10x :
+
+#include <stdio.h>
+
+  void main(){
+    printf("Si B adalah programer \n");
+    printf("Si B adalah programer \n");
+    printf("Si B adalah programer \n");
+    printf("Si B adalah programer \n");
+    printf("Si B adalah programer \n");
+    printf("Si B adalah programer \n");
+    printf("Si B adalah programer \n");
+    printf("Si B adalah programer \n");
+    printf("Si B adalah programer \n");
+    printf("Si B adalah programer \n");
+}
+
+Hasilnya :
+Si B adalah programer
+Si B adalah programer
+Si B adalah programer
+Si B adalah programer
+Si B adalah programer
+Si B adalah programer
+Si B adalah programer
+Si B adalah programer
+Si B adalah programer
+Si B adalah programer
+
+## Apakah Boleh begitu ? 
+Boleh2 aja tapi kan capek apalagi kita disuruh ngetik sampe 1000 - 2000 kata ?
+nah maka dari itu kita harus menggunakan perulangan 
+Perulangan akan membantu kita mengeksekusi kode yang berulang-ulang, berapapun yang kita mau.
+
+## Ada empat macam bentuk perulangan pada C.
+Secara umum, dibagi menjadi dua kelompok.
+Yaitu: - counter loop 
+       - uncounted loop.
+
+## Perbedaanya:
+    Counted Loop merupakan perulangan yang jelas dan sudah tentu banyak kali perulangannya.
+    Sedangkan Uncounted Loop, merupakan perulangan yang tidak jelas berapa kali ia harus mengulang.
+
+# Contohnya 
+For(Counter loop)         While(Ecounted Loop)
+Push Up 10x           vs  Push Up Sampai Bosan 
+for (i=0; i<10; i++){     While (not bosan){
+    pushUp();                 pushUp();
+}   
+                           }
+
+## Perulangan yang termasuk dalam Counted Loop : 
+- Perulangan For 
+Perulangan yang termasuk dalam Ecounted Loop
+- Perulangan While 
+- Perulangan Do/While
+
+## Pengertian :
+Perulangan For pada C
+Perulangan for merupakan perulangan yang termasuk dalam counter loop, karena sudah jelas berapa kali ia akan mengulang.
+
+Contoh Bentuk Code Perulangan For :
+for(int i = 0; i < 10; i++){
+    printf("Perulangan ke-%i\n", i);
+}
+Yang perlu diperhatikan adalah kondisi yang ada di dalam kurung setelah kata for.
+Kondisi ini akan menentukan:
+    Hitungan akan dimulai dari 0 (i = 0);
+    Hitungannya sampai berapa? Sampai i < 10;
+    Lalu di setiap perulangan i akan bertambah +1 (i++).
+Variabel i pada perulangan for berfungsi untuk menyimpan nilai hitungan.
+Jadi setiap perulangan dilakukan nilai i akan selalu bertambah satu. Karena kita menentukannya di bagian i++
+
+## Contoh program Loop(Perulangan) Dengan For :
+#include <stdio.h>
+
+void main(){
+    for(int i = 0; i < 10; i++){
+        printf("Perulangan ke-%i\n", i);
+    }
+}
+
+Apakah nama variabelnya harus selalu i? Tidak.
+Kita juga bisa menggunakan nama lain.
+
+# Misalnya:
+#include <stdio.h>
+
+void main(){
+    for(int counter = 0; counter < 50; counter+=2){
+        printf("Perulangan ke-%i\n", counter);
+    }
+}
+
+### Perulangan While pada C
+Perulangan while merupakan perulangan yang termasuk dalam perulangan uncounted loop.
+Perulangan while juga dapat menjadi perulangan yang counted loop dengan memberikan counter di dalamnya.
+Bentuk flow chart-nya sama seperti flow chart for.
+
+## Contoh Program :
+#include <stdio.h>
+
+void main(){
+    char ulangi = 'y';
+    int counter = 0;
+
+    // perulangan while
+    while(ulangi == 'y'){
+        printf("Apakah kamu mau mengulang?\n");
+        printf("Jawab (y/t): ");
+        scanf(" %c", &ulangi);
+
+        // increment counter
+        counter++;
+    }
+
+    printf("\n\n----------\n");
+    printf("Perulangan Selesai!\n");
+    printf("Kamu mengulang sebanyak %i kali.\n", counter);
+}
+
+## Coba perhatikan blok kode while:
+// perulangan while
+while(ulangi == 'y'){
+    printf("Apakah kamu mau mengulang?\n");
+    printf("Jawab (y/t): ");
+    scanf(" %c", &ulangi);
+    // increment counter
+    counter++;
+}
+## Perulangan akan terjadi selama variabel ulangi brenilai y.
+Lalu kita menggunakan fungsi scanf() untuk mengambil input.
+Selama kita menjawab y pada input, maka perulangan akan terus dilakukan.
+Tapi kalau kita jawab yang lain, maka perulangan akan dihentikan.
+Karena kondisi perulangannya tidak terpenuhi.
+
+### Perulangan Do/While pada C
+Perulangan do/while sama seperti perulangan while.
+
+# Perbedaanya:
+Perulangan do/while akan melakukan perulangan sebanyak 1 kali terlebih dahulu
+lalu mengecek kondisi yang ada di dalam kurung while.
+Contoh Bentuk Code Do/While :
+do {
+    // blok kode yang akan diulang
+} while (<kondisi>);
+Perbedaan :
+Perulangan do/while akan mengecek kondisi di belakang (sesudah mengulang)
+sedangkan while akan mengecek kondisi di depan atau awal (sbelum mengulang).
+
+## Contoh Program Perulangan Do/While :
+#include <stdio.h>
+
+void main(){
+
+    char ulangi = 'y';
+    int counter = 0;
+
+    do {
+        printf("Apakah kamu mau mengulang?\n");
+        printf("Jawab (y/t): ");
+        scanf(" %c", &ulangi);
+
+        // increment counter
+        counter++;
+    } while(ulangi == 'y');
+
+    printf("\n\n----------\n");
+    printf("Perulangan Selesai!\n");
+    printf("Kamu mengulang sebanyak %i kali.\n", counter);
+}
+
+Contoh tersebut sama seperti contoh pada perulangan while.
+Saat perulangan pertama, cobalah untuk membatalkan perulangannya dengan menjawab t.
+Maka Hasilnya begini :
+
+Apakah kamu mau mengulang ?
+Jawab (y/t): t 
+
+
+--------
+Perulangan Selesai
+Kamu mengulang sebanyak 1 kali.
+
+### Perulangan Bersarang (Nested Loop)
+Di dalam blok perulangan, kita juga dapat membuat perulangan.
+Ini disebut dengan nested loop atau perulangan bersarang atau perulangan di dalam perualangan.
+
+## Contoh Program Perulangan Bersarang (Nested Loop) :
+#include <stdio.h>
+   
+   void main(){
+    printf(int i = 0; i < 10; i++){
+     for(int j = 0; j < 10; j++){
+       printf("Perulangan ke (&d, %d)\n", i, j);
+  }
+}
+
+Pada perulangan itu, kita menggunakan dua perulangan for.
+Perulangan pertama menggunakan variabel i sebagai counter
+sedangkan perulangan kedua menggunakan variabel j sebagai counter.
