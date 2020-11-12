@@ -37,7 +37,8 @@
 <li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/fungsibagi.c">Using the Split Function</a></li>
 <li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/fungsiadd.c">Using The Add Function</li></a>
 <li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/fungsigets.c">Using The Gets Function</li></a>
-<li><a href="https://github.com/syssaturn404/CLanguage/blob/master/Variable_LocalGlobal.c">Variable Local Global</a></ul></li>
+<li><a href="https://github.com/syssaturn404/CLanguage/blob/master/Variable_LocalGlobal.c">Variable Local Global</a></li>
+<li><a href="https://github.com/syssaturn404/CLanguage/blob/master/FungsiVOID.c">Void Function</a></li></ul>
 
 <p><bold>Basic Operators</p></bold>
 <li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/DefinitionOperator.txt">Definition Operator</li></a>
@@ -48,6 +49,7 @@
 <li><a href= "https://github.c om/syssaturn404/CLanguage/blob/master/Comparison_Operator.c">Comparison Operator</a></li>
 <li><a href= "https://github.com/syssaturn404/CLanguage/blob/master/Logical_Operator.c">Logical Operator</a></li>
 <li><a href= "https://github.com/syssaturn404/CLanguage/blob/master/Misc_Operator.c">Misc Operator</a></li>
+<li><a href="https://github.com/syssaturn404/CLanguage/blob/master/Arithmetic.c">Arithmetic</a></li>
 <li><a href= "https://github.com/syssaturn404/CLanguage/blob/master/Calc_UseSwitchCase.c">Calculator Program Using Switch Case</li></a>
 <li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/Increment.cpp">Increment Operator</a></li>
 <li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/Decrement.cpp">Decrement Operator</a></li>
@@ -68,6 +70,17 @@
 <li><a href="https://github.com/syssaturn404/CLanguage/blob/master/LOOP/DO_WHILELoop_Block.c">Loop Using Do/While</a></li></ul>
 <ul>
 <p><bold>Array</bold></p>
+<li><a href="https://github.com/syssaturn404/CLanguage/blob/master/Array/Definition_Array.txt">Definition Array</a></li>
+<li><a href="https://github.com/syssaturn404/CLanguage/blob/master/Array/Structure_Data_Array.c">Structure Data Array</a></li>
+<li><a href="https://github.com/syssaturn404/CLanguage/blob/master/Array/Program_Hitung_Rata2.c">Average Calculation Program</a></li>
+<li><a href="https://github.com/syssaturn404/CLanguage/blob/master/Array/Ambil_Array.c">Take the Length of the Array</a></li>
+<li><a href="https://github.com/syssaturn404/CLanguage/blob/master/Array/Ubah_Isi_Array.c">Change Array Fill</a></li>
+<li><a href="https://github.com/syssaturn404/CLanguage/blob/master/Array/Manipulation_Strcpy.c">Manipulation String Strcpy</a></li>
+<li><a href="https://github.com/syssaturn404/CLanguage/blob/master/Array/Manipulation_Strcat.c">Manipulation String Strcat</a></li>
+<li><a href="https://github.com/syssaturn404/CLanguage/blob/master/Array/Manipulation_Strcmp.c">Manipulation String Strcmp</a></li>
+<li><a href="https://github.com/syssaturn404/CLanguage/blob/master/Array/Manipulation_Strchr.c">Manipulation String Strchr</a></li>
+<li><a href="https://github.com/syssaturn404/CLanguage/blob/master/Array/Manipulation_Strlen.c">Manipulation String Strlen</a></li>
+<li><a href="https://github.com/syssaturn404/CLanguage/blob/master/Array/Manipulation_Strstr.c">Manipulation String Strstr</a></li>
 <li><a href="https://github.com/syssaturn404/CLanguage/blob/master/Array/Array_Multidimensi.c">Array Multi Dimensi</a></li></ul>
 <h1><a id="user-content-list-of-programs" class="anchor" aria-hidden="true" href="https://saweria.co/miawgarong"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Master</h1><ul>
 <li><a href="https://github.com/syssaturn404/CLanguage/blob/master/Master/CRUD.c">CRUD</a></li>
@@ -79,9 +92,13 @@
 <img src = "https://k.top4top.io/p_1776fj3tf1.png" width ="300px" height = "200px">
 <li>You open the link: https://www.programiz.com/c-programming/online-compiler/</li>
 <li>Then copy the block of code you want to run, then hit run</li>
-
 <h1><a id="user-content-list-of-programs" class="anchor" aria-hidden="true" href="https://saweria.co/miawgarong"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Donate ? </h1><ul>
 
 * [`Saweria`](https://saweria.co/donate/miawgarong)
 * [`Bitcoin`](35oZcwGvePp7j3PQau5cPDKWoQgn8NMBeu)
 * [`Paypal`](https://paypal.me/miawgarong)
+
+### CONTRIBUTOR
+
+>*If there is a syntax error in the program code or writing in the definition
+please contact me, humans are never free from errors
