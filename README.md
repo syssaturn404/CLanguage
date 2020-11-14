@@ -38,7 +38,8 @@
 <li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/fungsiadd.c">Using The Add Function</li></a>
 <li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/fungsigets.c">Using The Gets Function</li></a>
 <li><a href="https://github.com/syssaturn404/CLanguage/blob/master/Variable_LocalGlobal.c">Variable Local Global</a></li>
-<li><a href="https://github.com/syssaturn404/CLanguage/blob/master/FungsiVOID.c">Void Function</a></li></ul>
+<li><a href="https://github.com/syssaturn404/CLanguage/blob/master/FungsiVOID.c">Void Function</a></li>
+<li><a href="https://github.com/syssaturn404/CLanguage/blob/master/Pointer.txt">Pointer</li></a></ul>
 
 <p><bold>Basic Operators</p></bold>
 <li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/DefinitionOperator.txt">Definition Operator</li></a>
