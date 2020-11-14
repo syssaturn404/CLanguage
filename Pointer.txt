@@ -1,0 +1,255 @@
+### Pointer 
+Pointer adalah sebuah variabel yang berisi alamat memori dari variabel yang lain. 
+Pointer nantinya akan bisa mengakses data yang ada di suatu alamat memori.
+
+Coba perhatikan program ini :
+#include <stdio.h>
+
+void main () {
+
+   int  a;
+   char b[10];
+
+   printf("Alamat memori variabel a: %x\n", &a);
+   printf("Alamat memori variabel b: %x\n", &b);
+
+}
+
+Pada program tersebut, kita menggunakan simbol & untuk mengambil alamat memori dari variabel a dan b. 
+Lalu menggunakan format specifier %x untuk menampilkannya dalam bilangan heksadesimal.
+Apa itu format specifier ?
+Specifier yang mendefinisikan jenis data yang ingin di cetak pada output
+Biasanya disebut juga dengan format string
+
+## Cara Membuat Pointer
+Pointer dibuat dengan menambahkan simbol * (asterik) di depan namanya 
+kemudian diisi dengan alamat memori yang akan digunakan sebagai referensi.
+
+Contoh:
+
+int *pointer1 = 00001;
+
+Maka *pointer1 akan bisa mengakses data yang ada pada alamat memori 00001. 
+Dengan kata lain, si *pointer1 akan menggunakan alamat 00001 sebagai referensinya.
+Kita juga bisa membuat pointer, tanpa harus mengisinya langsung dengan alamat memori.
+
+Contoh:
+
+int *pointer_ku;
+
+// atau bisa juga
+int *pointer_ku = NULL;
+
+Karena kita tidak bisa lihat daftar alamat memori secara langsung
+kita akan kesulitan memberikan referensi alamat memori kepada pointer.
+Belum lagi.. beda komputer beda juga alamat memorinya dan alamat memori akan selalu berubah setiap program dieksekusi.
+
+Solusinya:
+Kita harus mengambil alamat memori dari variabel yang lain.
+Ya, dengan menggunakan simbol &.
+
+Contohnya gini :
+
+int umur = 20;
+float tinggi = 127.7
+
+int *pointer_umur =&umur  
+int *p_tingi=&tinggi =&tinggi 
+int *pointer2_umur =&umur
+
+Ngerti ? 
+
+Jadi Misal gmur ini, *pointer_umur dan *pointer2_umenggunakan referensi memori 00001
+Dan *p_tinggi menggunakan alamat variable 
+
+Contoh Program :
+#include <stdio.h>
+
+void main(){
+
+    // membuat alamat memory variable
+    int umur = 20;
+    float tinggi = 120.7;
+
+    // membuat alamat memory pointer 
+    int *pointer_umur = &umur;
+    float *pointer1_tinggi = &tinggi;
+    float *p_tinggi = &tinggi;
+
+    // mengambil alamat memory var
+    printf("Alamat Memory Var 'Umur' Adalah : %d\n", &umur);
+    printf("Alamat Memory Var 'Tinggi' Adalah : %d\n", &tinggi);
+
+    // mengambil alamat memory pointer 
+    printf("Alamat Memory '*pointer_umur' Adalah : %d\n", *pointer_umur);
+    printf("Alamat Memory '*pointer1_tinggi' Adalah : %d\n", *pointer1_tinggi);
+    printf("Alamat Memory '*p_tinggi Adalah' : %d\n", *p_tinggi);
+
+}
+
+Itu contoh referensi alamat pointer
+Inget lagi Pointer cuma bisa mengakses datanya lewat referensi yang diberikan 
+
+Lohhhh jadi boros dong memory ?
+Kalo kita bisa pake var biasa kenapa harus pakai pointer ?
+Penggunaan Pointer itu opsional boleh ya boleh ga 
+Cuma kondisi tertentu aja kita pakai pointer, kenapa ? karna pointer lebih optimal
+Cara mengakses data dengan pointer
+
+Contoh Program :
+#include <stdio.h>
+
+void main(){
+    // membuat variabel value
+    int value = 0;
+    int tinggi = 0;
+
+    // membuat pointer dan referensikan dengan alamat
+    // dari variabel value
+    int *p_value = &value;
+    int *pointer_tinggi = &tinggi;
+
+    // mengakses data variabel score dari pointer
+    printf("isi '*p_value' awal : %d\n", *p_value);
+
+    printf("isi 'value' awal : %d\n", value);
+
+    printf("Isi 'tinggi' awal : %d\n", tinggi);
+
+    printf("Isi '*pointer_tinggi' awal : %d\n", *pointer_tinggi);
+
+
+    // mengubah data variabel score dari pointer
+    *p_value = 10;
+    *pointer_tinggi = 200;
+
+    // melihat isi variabel score
+    printf("Setelah isi value diubah : %d\n", value);
+    printf("Setelah isi tinggi diubah : %d\n", tinggi);
+}
+
+Hasilnya :
+
+isi '*p_value' awal : 0
+isi 'value' awal : 0
+Isi 'tinggi' awal : 0
+Isi '*pointer_tinggi' awal : 0
+Setelah isi value diubah : 10
+Setelah isi tinggi diubah : 200
+root@LAPTOP-IRVR954L:/mnt/d/Ngoding_C#
+
+Lalu kapan waktu yang pas menggunakan pointer ? seperti yang udah dijelasin tadi menggunakan pointer
+Akan lebih optimal dibandingkan variable biasa.. disaat tertentu aja menggunakannya 
+Ga selalu program harus menggunakan pointer,, bisa juga menggunakan variable biasa
+
+Mengapa pointer diciptakan?
+
+Jadi zaman dulu, memori komputer itu sangat terbatas. 
+Saat mengelola struktur data kompleks seperti data pada array, linked list, tree, dan sebagainya.. 
+sering kali memakan banyak memori.
+Oleh sebab itu, diciptakanlah pointer agar mudah membuat struktur data tersebut, dan tentunya lebih hemat memori.
+
+Studi Kasus: Pointer untuk Pass By Reference 
+
+Pertama kita coba buat program menggunakan pointer untuk pass by reference
+
+Contoh Program :
+#include <stdio.h>
+
+    // kita membuat pass by reference
+    void add_value(int value){
+        value = value + 5;
+    }
+
+    void main(){
+        int value = 0;
+
+        // setelah di output 
+        printf("Sebelum diubah : %d\n", value);
+        add_value(value);
+        
+        // menampilkan score setelah dirubah 
+        printf("Setelah dirubah : %d\n", value);
+    }
+
+Hasilnya :
+
+Sebelum diubah : 0
+Setelah dirubah : 0
+root@LAPTOP-IRVR954L:/mnt/d/Ngoding_C#
+
+Kenapa bisa begitu ? kan kita udah rubah 
+kita juga udah nambahin fungsi add_value untuk nambahin nilainya 
+sebanyak 5 kali,, kenapa gitu ?
+
+Jawabanya... karna kita menggunakan Pass By Value bukan Pass By Reference 
+Variable value kan berada di fungsi main() saat variable value ingin mencoba angkanya 
+Ya maka perubahannya hanya terjadi di lokalnya aja d dalam fungsi add_value 
+Ga percaya ? coba tambahin sedikit sajiannya untuk menjadikan Pass By Value Menjadi Pass By Reference 
+
+Tulis program ini :
+#include <stdio.h>
+
+    // kita membuat pass by reference
+    void add_value(int value){
+        value = value + 5;
+	
+	 // disini kita mengubah nilainya 
+  printf("Nilai Yang Terbuang : %d\n", value);
+    }
+
+    void main(){
+        int value = 0;
+
+        // setelah di output 
+        printf("Sebelum diubah : %d\n", value);
+        add_value(value);
+        
+        // menampilkan score setelah dirubah 
+        printf("Setelah dirubah : %d\n", value);
+    }
+
+
+Hasilnya setelah kita rubah jadi gini :
+
+Sebelum diubah : 0
+Nilai Yang Terbuang : 5
+Setelah dirubah : 0
+root@LAPTOP-IRVR954L:/mnt/d/Ngoding_C#
+
+Lohh kok bisa ? ya iya karna Pass By Reference hanya mengubah nilainya di lokal saja di fungsi add_value
+seperti yang udah dijelasin tadi 
+Setiap fungsi add_score() dipanggil atau dieksekusi, maka nilai variabel score akan bertambah 5.
+
+Coba tulis program gini :
+#include <stdio.h>
+
+    void add_nilai(int *nilai){
+        
+        // variable untuk add_nilai
+        *nilai = nilai + 8;
+        
+        // output setelah nilai diubah
+        // menggunakan pass by reference
+        printf("Nilai Diubah Ke : %d\n", *nilai);
+     }
+
+    void main(){
+
+        // menentukan referensi pointer sebelum mengubah nilai
+        int nilai = 0;
+
+        // nilai sebelum diubah
+        printf("Nilai Sebelum Diubah : %d\n", nilai);
+
+        // output nilai setelah diubah
+        // memanggil fungsi add_nilai
+        add_nilai(&nilai);
+        add_nilai(&nilai);
+        add_nilai(&nilai);
+        add_nilai(&nilai);
+        add_nilai(&nilai);
+        add_nilai(&nilai);
+        add_nilai(&nilai);
+        add_nilai(&nilai);
+    }
