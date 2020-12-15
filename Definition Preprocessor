@@ -1,0 +1,188 @@
+>> Preprocessor directives 
+
+> Definisi 
+Pre-processor Directive adalah operasiawal dalam file C/C++ sebelum dikirim kekompilator.
+Pre-prosesor mendapatkan kode sumber (file test.c) sebagai input dan membuat kode sumber perantara yang diperluas (file test.I). 
+Kode sumber yang diperluas ini kemudian diteruskan ke kompiler untuk kompilasi. 
+Pra-prosesor menerima kode sumber sebagai masukan dan bertanggung jawab untuk Menghapus komentar. 
+Menafsirkan arahan praprosesor khusus yang dilambangkan dengan #.
+
+ /------\         /-------------\         /-----------------\         /--------\
+| Source | ====> | Pre-Processor | ====> | Intermediate Code | ====> | Compiler |
+ \------/         \-------------/         \-----------------/         \--------/
+
+>>Format 
+  - Diawali Dengan Character # dan diikuti dengan keyword 
+  - Harus diakhiri dengan new line(enter)
+  - Tidak menggunakan semicolon(titik dua) di akhir seperti program lainnya
+
+>> Define 
+  - Mendefinisikan / mereplace semua macro sekuen.
+  - Examples : 
+      #define COUTER 1000
+      #define MAX COUNTER + 100
+   > Function Like-Macros 
+        #define SUM (a,b) (a + b)
+        #define PRNT(a,b) \
+            printf("Value 1 : %d\n", a);\
+            printf("Value 2 : %d\n", b);
+
+>> Preprocessor Unit Manual List
+/---------------------------------------------------------------------------------------------------------------------------------\
+|Pre-Proecessor Directive  |    Directive       |                              Description                                         |
+|----------------------------------------------------------------------------------------------------------------------------------|
+|   Macros Expansion       | #define, #undef    | digunakan untuk mendefinisikan makro, Digunakan untuk membatalkan definisi makro |
+|----------------------------------------------------------------------------------------------------------------------------------|
+| File Inclusion Directive | #include           | menyisipkan header tertentu dari file lain                                       |
+|----------------------------------------------------------------------------------------------------------------------------------|
+| Conditional              | #ifdef             | Mengembalikan nilai benar jika makro ini ditentukan                              |
+|  Directive               | #ifndef            | Mengembalikan nilai benar jika makro ini tidak ditentukan                        |
+|                          | #endif             | Mengakhiri praprosesor bersyarat                                                 |
+|                          | #elif              | #else dan #if dalam satu pernyataan                                              |
+|                          | #if                | Tests if a compile time condition is true                                        |
+|----------------------------------------------------------------------------------------------------------------------------------|
+| Miscellaneous            | #error             | Mencetak pesan kesalahan di stderr                                               | 
+|                          | #pragma            | Mengeluarkan perintah khusus ke kompilator, menggunakan metode standar           |
+\----------------------------------------------------------------------------------------------------------------------------------/
+
+>> Macros Directive 
+
+apa itu makro? Jelaskan #define dengan contoh. 
+Makro adalah fragmen kode yang telah diberi nama. 
+Setiap kali nama digunakan, itu diganti dengan konten makro. 
+Anda dapat menentukan pengenal yang valid sebagai makro, meskipun itu adalah kata kunci 'C', pra-pemroses tidak tahu apa-apa tentang kata kunci. 
+Dalam Substitusi Makro, pengenal dalam program diganti dengan string yang ditentukan sebelumnya yang terdiri dari satu atau lebih token. 
+Kita bisa menggunakan direktif #define untuk tujuan ini. 
+Bentuknya seperti ini: #define <identifier> <token>
+Definisi harus dimulai dengan kata kunci #define dan harus diikuti oleh pengenal dan token dengan setidaknya satu spasi kosong di antara keduanya. 
+Token dapat berupa teks dan pengenal harus berupa nama C yang valid. 
+Pra-prosesor menggantikan setiap kemunculan pengenal dalam kode sumber dengan token. 
+Ada berbagai bentuk substitusi makro. 
+
+>Bentuk yang paling umum adalah: 
+    1) Substitusi makro sederhana. 
+    2) Argumen substitusi makro.
+Penggantian token sederhana biasanya digunakan untuk mendefinisikan konstanta.
+
+>> #define Directive
+
+> Examples PI
+  #define PI 3.1415926
+
+>> Examples 
+
+#include <stdio.h>
+#include <windows.h>
+#define PI 3.1415
+#define text printf(".:: CONTOH PRA-PROCESSOR ::.\n")
+#define text1 printf("FUNCTION LIKE-MACROS PRA-PROSESSOR\n")
+int main(void){
+	float hasil;
+	
+	hasil = PI * 15 * 2;
+	system("color 9");
+	printf("",text);
+	printf("",text1);
+	printf("NILAI PI = 3.1415\n");
+	printf("NILAI PI HASIL = PI * 15 * 2\n");
+	printf("HASIL : %f", hasil);
+	
+	return 0;
+}
+
+
+Output :
+.:: CONTOH PRA-PROCESSOR ::.
+FUNCTION LIKE-MACROS PRA-PROSESSOR
+NILAI PI = 3.1415
+NILAI PI HASIL = PI * 15 * 2
+HASIL : 94.245003
+Fungsi makro memberikan kecepatan program yang lebih cepat dari fragmen program. 
+Pra-prosesor memungkinkan kita untuk mendefinisikan bentuk penggantian yang lebih kompleks dan lebih berguna yang dibutuhkan dalam bentuk berikut (Substitusi makro argumen).
+#define identifier (f1, f2, f3 .... fn) kode sumber token C di bawah ini menunjukkan penggunaan yang tepat dari Fungsi makro.
+
+>> Examples 
+   #include <stdio.h>
+   #include <conio.h>
+   #define SQUARE(x) (x) * (x)
+   
+   int main(void){
+       system("cls"); // jika pengguna linux clear
+       printf("%d", SQUARE(10)); // nilai / const
+    }
+
+>> #undef Directive
+Apa itu direktif #undef? Jika Anda telah membuat definisi makro, Anda dapat menggunakan #undef untuk menghapusnya. 
+#undef direktif menyebabkan nama yang ditentukan menjadi tidak terdefinisi. 
+Ini berarti pra-pemroses tidak lagi membuat substitusi teks yang terkait dengan kata itu. 
+Makro yang ditentukan dapat tidak ditentukan menggunakan pernyataan berikut: 
+#undef pengenal Misalnya #undef VALUE akan menyebabkan definisi VALUE dihapus dari sistem. 
+Makro tak terdefinisi berguna ketika kita ingin membatasi definisi hanya untuk bagian tertentu dari program. 
+Selain itu, untuk mengubah definisi, Anda harus menggunakan #undef untuk membatalkan definisi, lalu menggunakan #define untuk menguranginya. 
+C Kode sumber di bawah ini menunjukkan penggunaan pra-prosesor #undef.
+
+>> Examples 
+  #include <stdio.h>
+  #define PI 3.14
+  #define AREA(x)(PI) * (x) * (x)
+
+  int main(void){
+	
+	  printf("%f", AREA(10));
+	  #undef PI // PI tidak dapat digunakan lagi..
+	  return 0;
+}
+
+>> #include Directive
+
+Jelaskan #include arahan ! Oke saya akan menjelaskan. 
+File inclusion directive menyebabkan satu file dimasukkan ke dalam file lain. 
+Kami telah menggunakan direktif inklusi file sebelumnya. 
+Perintah pra-prosesor untuk penyertaan file terlihat seperti ini: 
+  #include "Nama file" ATAU #include <nama file> 
+Jika nama file diapit dalam tanda kurung sudut, file tersebut akan dicari dalam paths include compiler standar. 
+Jika nama file diapit dalam tanda kutip ganda, jalur pencarian diperluas untuk menyertakan direktori sumber saat ini. 
+Jika seandainya file hilang atau tidak ditemukan compiler membuat kesalahan. 
+Juga merupakan standar umum bahwa file header disertakan dalam kurung sudut sementara file yang ditentukan pengguna disertakan dalam tanda kutip ganda. 
+#include <stdio.h> Dan #include "myfile.c" Pernyataan di atas dalam C akan menyertakan file stdio.h dan myfile.c dalam program tersebut. 
+Kode sumber C berikut menunjukkan penggunaan #include pra-prosesor: 
+
+    #include <stdio.h> / * include file header standar. * / 
+    #Include “C: myfile.c” / * Sertakan file yang ditentukan pengguna. * / 
+    int main (void){
+        printf ("Perhatikan penggunaan #Include pre-processor"); 
+        return 0; 
+        } 
+
+>> Jelaskan makro standar yang digunakan dalam bahasa C. 
+Ada lima makro ANSI C yang telah ditentukan dan selalu tersedia bagi pemrogram untuk digunakan seperti yang tercantum dalam tabel berikut. 
+    - Mereka tidak bisa tidak ditentukan.
+    - Setiap nama makro yang ditentukan sebelumnya ditentukan dengan dua garis bawah sebagai awalan dan akhiran. 
+    - Makro ini berguna untuk menemukan informasi sistem seperti tanggal, waktu, dan nama file serta nomor baris. 
+    - Sebuah program diilustrasikan untuk menguji makro ini. 
+    - Makro yang ditentukan sebelumnya di ANSI C:
+ 
+
+ /-----------------------------------------------------------------------\
+| Pre-Defined Macros |                    Function                        |                     
+|-------------------------------------------------------------------------|
+|     __DATE__       | Menampilkan tanggal system dalam format string.    |
+|-------------------------------------------------------------------------|
+|     __TIME__       | Menampilkan waktu system dalam format string.      |
+|-------------------------------------------------------------------------|
+|     __LINE__       | Menampilkan nama file saat ini dalam format string.|
+|-------------------------------------------------------------------------|
+|     __STDC__       | Dalam ANSI C, nilai yang dikembalikan bukan nol.   |
+|_________________________________________________________________________|
+
+>> Examples
+
+#include <stdio.h>
+
+int main(void){
+	
+	printf("File nama dan PATH : %s\n",__FILE__);
+	printf("Pembuatan Tanggal : %s Bulan : %s",__TIME__, __DATE__);
+	return 0;
+}
+
