@@ -1,0 +1,102 @@
+>> Apa itu type data enum ??
+
+Enum atau Enumeration merupakan tipe data yang berisi sekumpulan konstanta.
+Enum termasuk dalam tipe data bentukan, karena tipe data ini dibuat sendiri oleh kita.
+
+Contoh:
+
+enum level {EASY = 1, NORMAL = 2, HARD = 3};
+enum sex {MALE, FEMALE};
+enum state {PENDING, INPROGRESS, DONE}
+
+Maka konstanta yang ada di dalam enum hari akan bernilai:
+
+SENIN  = 0
+SELASA = 1
+RABU   = 2
+KAMIS  = 3
+JUMAT  = 4
+SABTU  = 5
+MINGGU = 6
+
+>> Membuat Program dengan Enum
+
+Sekarang mari kita coba membuat sebuah program dengan enum.
+Silahkan buat program baru bernama contoh_enum.c, kemudian isi dengan kode berikut.
+
+#include <stdio.h>
+
+enum hari {SENIN, SELASA, RABU, KAMIS, JUMAT, SABTU, MINGGU};
+
+void main() {
+    enum hari sekarang;
+    sekarang = RABU;
+    printf("Sekarang hari ke-%d", sekarang + 1);
+}
+
+Hasilnya :
+root@rajingoding:/mnt/d/Ngoding_C# ./iniContoh_Enum
+Sekarang hari ke-3
+
+>> Membuat Tipe Data Boolean dari Enum
+
+Bahasa pemrograman C tidak memiliki tipe data boolean seperti bahasa pemrograman lain.
+Tapi..
+Kita bisa membuatnya sendiri.
+Pada bahasa C, nilai true akan sama dengan 1 dan false sama dengan 0.
+
+Maka kita bisa membuat enum untuk boolean seperti ini:
+enum boolean {false, true};
+Mari kita coba dalam program…
+Buatlah program baru bernama contoh_boolean.c, kemudian isi dengan kode berikut:
+
+#include <stdio.h>
+
+enum boolean {false, true};
+
+void main() {
+    int a = 4;
+    int b = 5;
+
+    if(a < b == true){
+        printf("variabel a lebih kecil dari b\n");
+    }
+}
+
+Hasilnya :
+
+root@rajingoding:/mnt/d/Ngoding_C# ./enumboolean
+variabel a lebih kecil dari b
+
+>Mengapa Kita Membutuhkan Enum?
+
+Karena enum akan memberikan efisiensi dan fleksibilitas dalam penggunaan memori.
+Veriabel enum hanya akan mengambil satu nilai dari konstanta yang ada.
+
+Contoh:
+
+#include <stdio.h>
+
+enum hari {SENIN, SELASA, RABU, KAMIS, JUMAT, SABTU, MINGGU};
+
+void main() {
+    enum hari sekarang;
+    sekarang = RABU;
+
+    printf("Ukuran variabel enum: %d bytes\n", sizeof(sekarang));
+}
+
+Hasilnya :
+root@rajingoding:/mnt/d/Ngoding_C# gcc ConstEnum.c -o Contsenum
+ConstEnum.c: In function ‘main’:
+ConstEnum.c:13:36: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+   13 |     printf("Ukuran variabel enum: %d bytes\n", sizeof(sekarang));
+      |                                   ~^           ~~~~~~~~~~~~~~~~
+      |                                    |           |
+      |                                    int         long unsigned int
+      |                                   %ld
+root@rajingoding:/mnt/d/Ngoding_C# ./Contsenum
+Ukuran variabel enum: 4 bytes
+
+Sedangkan kalo kita menggunakan array atau struct
+ukuran dari variabelnya akan mengikuti banyaknya isi dari array dan struct.
