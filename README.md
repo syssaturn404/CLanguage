@@ -29,7 +29,7 @@
 <li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/headerfileandfunction.txt">Header File And Function</a></li>
 <li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/function.txt">Function</a></li>
 <li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/FormatSpiciefer.txt">Format Spiciefer</a></li>
-<li><a href ="https://github.com/syssaturn404/CLanguage/blob/master/helloworld.c">Use Basic Function Create Output</a></li>
+<li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/helloworld.c">Use Basic Function Create Output</a></li>
 <li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/fungsiscanf.c">Using The Scanf Function</a></li>
 <li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/fungsiputs.c">Using The Puts Function</a></li>
 <li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/fungsifgets.c">Using The Fgets Function</a></li>
@@ -37,24 +37,24 @@
 <li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/fungsibagi.c">Using the Split Function</a></li>
 <li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/fungsiadd.c">Using The Add Function</li></a>
 <li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/fungsigets.c">Using The Gets Function</li></a>
-<li><a href="https://github.com/syssaturn404/CLanguage/blob/master/Variable_LocalGlobal.c">Variable Local Global</a></li>
-<li><a href="https://github.com/syssaturn404/CLanguage/blob/master/FungsiVOID.c">Void Function</a></li>
-<li><a href="https://github.com/syssaturn404/CLanguage/blob/master/Pointer.txt">Pointer</li></a></ul>
-
+<li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/Variable_LocalGlobal.c">Variable Local Global</a></li>
+<li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/FungsiVOID.c">Void Function</a></li>
+<li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/Type%20Data%20Enum.txt">Type Data Enum</li></a>
+<li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/example%20program%20enum.c">Example Of Bool Keyword Program</li></a>
+<li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/Pointer.txt">Pointer</li></a></ul>
 <p><bold>Basic Operators</p></bold>
 <li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/DefinitionOperator.txt">Definition Operator</li></a>
 <li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/Arithmatic.c">Basic Aritmatic</li></a>
 <li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/Arithmatic.c">Arithmetic Using The Float Data Type</a></li>
 <li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/OperationArithmatic.c">Operation Arithmatic</a></li>
 <li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/AssignmentOperator.c">Assignment Operator</a></li>
-<li><a href= "https://github.c om/syssaturn404/CLanguage/blob/master/Comparison_Operator.c">Comparison Operator</a></li>
-<li><a href= "https://github.com/syssaturn404/CLanguage/blob/master/Logical_Operator.c">Logical Operator</a></li>
-<li><a href= "https://github.com/syssaturn404/CLanguage/blob/master/Misc_Operator.c">Misc Operator</a></li>
-<li><a href="https://github.com/syssaturn404/CLanguage/blob/master/Arithmetic.c">Arithmetic</a></li>
-<li><a href= "https://github.com/syssaturn404/CLanguage/blob/master/Calc_UseSwitchCase.c">Calculator Program Using Switch Case</li></a>
+<li><a href = "https://github.c om/syssaturn404/CLanguage/blob/master/Comparison_Operator.c">Comparison Operator</a></li>
+<li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/Logical_Operator.c">Logical Operator</a></li>
+<li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/Misc_Operator.c">Misc Operator</a></li>
+<li><a href ="https://github.com/syssaturn404/CLanguage/blob/master/Arithmetic.c">Arithmetic</a></li>
+<li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/Calc_UseSwitchCase.c">Calculator Program Using Switch Case</li></a>
 <li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/Increment.cpp">Increment Operator</a></li>
 <li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/Decrement.cpp">Decrement Operator</a></li>
-
 <ul>
 <p><bold>Branching</bold></p>
 <li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/Branching/DefinitionBranching.txt">Definition Branching IF/ELSE</a></li>
@@ -62,13 +62,13 @@
 <li><a href = "https://github.com/syssaturn404/CLanguage/tree/master/Branching">Two Block Branch</a></li>
 <li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/Branching/Branching_UseOperatorTernary.c">Branching Use Operator Ternary</a></li>
 <li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/Branching/Branching_IFELSEIF.c">IF / ELSE / IF branching</a></li>
-<li><a href="https://github.com/syssaturn404/CLanguage/blob/master/Branching/Nested_Branching.c">Nested Branching</a></li>
-<li><a href="https://github.com/syssaturn404/CLanguage/blob/master/Branching/Branching_Using_SwitchCase.c">Branching Using Switch Case</a></li></ul>
+<li><a href ="https://github.com/syssaturn404/CLanguage/blob/master/Branching/Nested_Branching.c">Nested Branching</a></li>
+<li><a href ="https://github.com/syssaturn404/CLanguage/blob/master/Branching/Branching_Using_SwitchCase.c">Branching Using Switch Case</a></li></ul>
 <p><bold>LOOP</bold></p>
-<li><a href="https://github.com/syssaturn404/CLanguage/blob/master/LOOP/Definition_Loop.txt">Definition Loop</a></li>
-<li><a href="https://github.com/syssaturn404/CLanguage/blob/master/LOOP/Loop_For.c">Loop Using For</a></li>
-<li><a href="https://github.com/syssaturn404/CLanguage/blob/master/LOOP/While_LoopBlock.c">Loop Using While</a></li>
-<li><a href="https://github.com/syssaturn404/CLanguage/blob/master/LOOP/DO_WHILELoop_Block.c">Loop Using Do/While</a></li></ul>
+<li><a href ="https://github.com/syssaturn404/CLanguage/blob/master/LOOP/Definition_Loop.txt">Definition Loop</a></li>
+<li><a href ="https://github.com/syssaturn404/CLanguage/blob/master/LOOP/Loop_For.c">Loop Using For</a></li>
+<li><a href ="https://github.com/syssaturn404/CLanguage/blob/master/LOOP/While_LoopBlock.c">Loop Using While</a></li>
+<li><a href ="https://github.com/syssaturn404/CLanguage/blob/master/LOOP/DO_WHILELoop_Block.c">Loop Using Do/While</a></li></ul>
 <ul>
 <p><bold>Array</bold></p>
 <li><a href="https://github.com/syssaturn404/CLanguage/blob/master/Array/Definition_Array.txt">Definition Array</a></li>
@@ -83,7 +83,20 @@
 <li><a href="https://github.com/syssaturn404/CLanguage/blob/master/Array/Manipulation_Strlen.c">Manipulation String Strlen</a></li>
 <li><a href="https://github.com/syssaturn404/CLanguage/blob/master/Array/Manipulation_Strstr.c">Manipulation String Strstr</a></li>
 <li><a href="https://github.com/syssaturn404/CLanguage/blob/master/Array/Array_Multidimensi.c">Array Multi Dimensi</a></li></ul>
-<h1><a id="user-content-list-of-programs" class="anchor" aria-hidden="true" href="https://saweria.co/miawgarong"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Master</h1><ul>
+
+<h1><a id="user-content-list-of-programs" class="anchor" aria-hidden="true" href="#"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Expert</h1><ul>
+<p><bold>Basic Pre-Processor</p></bold>
+<li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/Definition%20Preprocessor">Definition</li></a>
+<li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/Examples_Macros_define.c">Examples Define Directive</li></a>
+<li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/Examples_Macros_Undef.c">Examples Undef Directive</li></a>
+<li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/Examples_Include_Directive.c">Examples Include Directive</li></a>
+<li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/Examples_ANSI_Macros.c">Examples ANSI Macros Pree</li></a></ul>
+<p><bold>Membaca Menulis</p></bold>
+<li><a href = "https://f4.bcbits.com/img/a1173595372_16.jpg">Definition</li></a>
+<li><a href = "https://f4.bcbits.com/img/a1173595372_16.jpg">Example Using fopen</li></a>
+<li><a href = "https://f4.bcbits.com/img/a1173595372_16.jpg">Example Using fclose</li></a>
+
+<h1><a id="user-content-list-of-programs" class="anchor" aria-hidden="true" href="#"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Master</h1><ul>
 <li><a href="https://github.com/syssaturn404/CLanguage/blob/master/Master/CRUD.c">CRUD</a></li>
 <li><a href="https://github.com/syssaturn404/CLanguage/blob/master/Master/Balap.cpp">Games Balap</a></li>
 <li><a href="https://github.com/syssaturn404/CLanguage/blob/master/Master/Gamebut.cpp">Games Blok</a></li>
