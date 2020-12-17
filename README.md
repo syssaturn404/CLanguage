@@ -20,6 +20,9 @@
 <li>#include&lt; stdio.h &gt; is wrong and you must remove whitespaces. #include&lt;stdio.h&gt; is correct.</li>
 <li>Please check your spellings before making a PR</li>
 <li>Comment code properly.</li>
+<p>If You Use Linux</p>
+<li>Make sure you have gcc installed</li>
+<li>Type in the command line gcc -o file then run the file by typing ./file name</li>
 <blockquote><em>"Everyone in this country has to learn to program computers, 
     because that teaches you how to think." ~ Steve Jobs ~</blockquote></em><hr />
 <img src ="https://a.top4top.io/p_1776ffkdr1.png" width ="300px" height = "200px">
