@@ -19,7 +19,7 @@
 <li>Make sure your program works after beautifying it.</li>
 <li>#include&lt; stdio.h &gt; is wrong and you must remove whitespaces. #include&lt;stdio.h&gt; is correct.</li>
 <li>Please check your spellings before making a PR</li>
-<li>Comment code properly.</li>
+<li>Comment code properly.</li><br/>
 <p>If You Use Linux</p>
 <li>Make sure you have gcc installed</li>
 <li>Type in the command line gcc -o file then run the file by typing ./file name</li>
@@ -57,7 +57,7 @@
 <li><a href ="https://github.com/syssaturn404/CLanguage/blob/master/Arithmetic.c">Arithmetic</a></li>
 <li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/Calc_UseSwitchCase.c">Calculator Program Using Switch Case</li></a>
 <li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/Increment.cpp">Increment Operator</a></li>
-<li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/Decrement.cpp">Decrement Operator</a></li>
+<li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/Decrement.cpp">Decrement Operator</a></li><br/>
 <ul>
 <p><bold>Branching</bold></p>
 <li><a href = "https://github.com/syssaturn404/CLanguage/blob/master/Branching/DefinitionBranching.txt">Definition Branching IF/ELSE</a></li>
@@ -71,7 +71,7 @@
 <li><a href ="https://github.com/syssaturn404/CLanguage/blob/master/LOOP/Definition_Loop.txt">Definition Loop</a></li>
 <li><a href ="https://github.com/syssaturn404/CLanguage/blob/master/LOOP/Loop_For.c">Loop Using For</a></li>
 <li><a href ="https://github.com/syssaturn404/CLanguage/blob/master/LOOP/While_LoopBlock.c">Loop Using While</a></li>
-<li><a href ="https://github.com/syssaturn404/CLanguage/blob/master/LOOP/DO_WHILELoop_Block.c">Loop Using Do/While</a></li></ul>
+<li><a href ="https://github.com/syssaturn404/CLanguage/blob/master/LOOP/DO_WHILELoop_Block.c">Loop Using Do/While</a></li></ul><br/>
 <ul>
 <p><bold>Array</bold></p>
 <li><a href="https://github.com/syssaturn404/CLanguage/blob/master/Array/Definition_Array.txt">Definition Array</a></li>
